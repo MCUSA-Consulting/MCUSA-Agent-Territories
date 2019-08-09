@@ -1,0 +1,127 @@
+html, body {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  background-color: #C2C5C6;
+}
+
+#map-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 74vw;
+  /*float: left;*/
+}
+
+#map { 
+  height: 90vh;
+  width: 70vw;
+  border: 5px solid #8B898D; 
+  border-radius: 20px;
+  /*margin: 0px auto;*/
+  align-self: center;
+}
+
+.button-side {
+/*  display: block;*/
+  display: flex;
+  float: right;
+  height: 100vh;
+  width:24vw;
+  justify-content: center;
+  align-items: center;
+  /*flex-direction: column;*/
+}
+
+.button-container {
+  height: 90vh;
+  width: 20vw;
+  align-self: center;
+  background: #9F9DA0;
+  border: 5px solid #8B898D;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button-title {
+  font: 4vh Tahoma, Helvetica, Arial, Sans-Serif;
+  text-shadow: 0px 2px 3px #555;
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  border-bottom: 2px solid #2F2E2F;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.button-group {
+  padding-top: 0.5rem;
+  overflow: auto;
+  padding-bottom: 0.5rem;
+}
+
+.button-group::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.button-group::-webkit-scrollbar
+{
+  width: 12px;
+  background-color: transparent;
+}
+
+
+.button-group::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #555;
+}
+
+/* ////////////////// BUTTON STYLING //////////////// */
+
+
+.button-container button {
+  margin: auto;
+  background-color: #9F9DA0;/*#B5B3B6;*/ 
+  border-top: 1px solid #D1D1D1; 
+  border-bottom: 1px solid #D1D1D1;
+  border-left: 0px;
+  border-right: 0px;
+
+  color: #1B1E1C;  /*White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; 
+  width: 60%; 
+  display: block; /* Make the buttons appear below each other */
+  font-size: 1rem;
+}
+
+.button-container button:not(:last-child) {
+  border-bottom: none; 
+}
+
+/* Add a background color on hover */
+.button-container button:hover {
+  background-color: #8B898D;
+}
+
+/* ///////// TOOLTIP STYLING ///////// */
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}

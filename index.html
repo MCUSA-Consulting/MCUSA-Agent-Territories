@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset =utf-8 />
+  <title>MCUSA Agent Territories</title>
+
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+<!-- ///////////// LOADING IMPORTANT STUFF //////////////// -->
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!-- Load Leaflet from CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+
+
+    <!-- Load Esri Leaflet from CDN -->
+    <script src="https://unpkg.com/esri-leaflet@2.2.4/dist/esri-leaflet.js"
+    integrity="sha512-tyPum7h2h36X52O2gz+Pe8z/3l+Y9S1yEUscbVs5r5aEY5dFmP1WWRY/WLLElnFHa+k1JBQZSCDGwEAnm2IxAQ=="
+    crossorigin=""></script>
+
+
+  <!-- Load Esri Leaflet Geocoder from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.2.14/dist/esri-leaflet-geocoder.css"
+    integrity="sha512-v5YmWLm8KqAAmg5808pETiccEohtt8rPVMGQ1jA6jqkWVydV5Cuz3nJ9fQ7ittSxvuqsvI9RSGfVoKPaAJZ/AQ=="
+    crossorigin="">
+  <script src="https://unpkg.com/esri-leaflet-geocoder@2.2.14/dist/esri-leaflet-geocoder.js"
+    integrity="sha512-uK5jVwR81KVTGe8KpJa1QIN4n60TsSV8+DPbL5wWlYQvb0/nYNgSOg9dZG6ViQhwx/gaMszuWllTemL+K+IXjg=="
+    crossorigin=""></script>
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+  </style>
+
+</head>
+
+<!-- /////////////// BODY //////////// -->
+
+<body>
+
+<!-- //////////////// BUTTON GROUP ///////////// -->  
+<div class="button-side">
+<div class="button-container">
+<div class="button-title">AGENTS</div>
+<div class="button-group">
+<button id="Reset">Reset Map</button>
+<button id="Empower">Empower</button>
+
+<button id="David-Newcomer">David Newcomer</button>
+<button id="Derek-Baltimore">Derek Baltimore</button>
+<button id="Earvin-Echols">Earvin Echols</button>
+<button id="Misti-Firestone">Misti Firestone</button>
+
+<button id="Mark-Mabaquiao">Mark Mabaquiao</button>
+<button id="Scott-Kempner">Scott Kempner</button>
+<button id="Bill-Cole">Bill Cole</button>
+<button id="Brian-Anderson" >Brian Anderson</button>
+<button id="Craig-Lewis" >Craig Lewis</button>
+<button id="Debbie-Withrow" >Debbie Withrow</button>
+<button id="Debra-Dryden" >Debra Dryden</button>
+<button id="Ed-Ward" >Ed Ward</button>
+<button id="Jeff-Slibowski" >Jeff Slibowski</button>
+<button id="Julie-Hardie" >Julie Hardie</button>
+<button id="Marco-Radwick" >Marco Radwick</button>
+<button id="Mimi-Miranda" >Mimi Miranda</button>
+<button id="Robert-Norris" >Robert Norris</button>
+<button id="Teresa-Nansen" >Teresa Nansen</button>
+<button id="Tim-Mickelson" >Tim Mickelson</button>
+<button id="Ann-Salameh" >Ann Salameh</button>
+<button id="Annalisa-Waunch" >Annalisa Waunch</button>
+<button id="Aristead-Sherrod" >Aristead Sherrod</button>
+<button id="Brad-Surrett" >Brad Surrett</button>
+<button id="Brandon-Burum" >Brandon Burum</button>
+<button id="Greg-Mistak" >Greg Mistak</button>
+<button id="James-Harris" >James Harris</button>
+<button id="Jim-Archer" >Jim Archer</button>
+<button id="Kevin-Shay" >Kevin Shay</button>
+<button id="Mike-Fehrenbacher" >Mike Fehrenbacher</button>
+<button id="Steven-Foster" >Steven Foster</button>
+<button id="Steve-Waunch" >Steve Waunch</button>
+</div>
+</div>
+</div>
+
+<!-- /////////////////// END BUTTON GROUP /////////// -->
+
+<div id = 'map-container'><div id='map'></div></div>
+<script type="text/javascript" src="useFinal.js"></script>
+
+<!-- ////////////// JAVASCRIPT //////////// -->
+
+<script type="text/javascript">
+if (screen.width >= 1500) {
+var map = L.map('map', {
+    center: [40.002962,-102.051090],
+    zoom: 5,
+    preferCanvas: true,
+    renderer: L.canvas(),
+});
+} else {
+  var map = L.map('map', {
+    center: [40.002962,-102.051090],
+    zoom: 4,
+    preferCanvas: true,
+    renderer: L.canvas(),
+});
+}
+
+// var map = L.map('map', {
+//     center: [40.002962,-102.051090],
+//     zoom: 5,
+//     preferCanvas: true,
+//     renderer: L.canvas(),
+// });
+
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+    maxZoom: 18,
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+      '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+      'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    id: 'mapbox.streets',//'mapbox.light'
+}).addTo(map);
+
+/////////////// SEARCH BAR ////////////////
+  var searchControl = L.esri.Geocoding.geosearch().addTo(map);
+  var results = L.layerGroup().addTo(map);
+
+  searchControl.on('results', function(data){
+    results.clearLayers();
+    for (var i = data.results.length - 1; i >= 0; i--) {
+      results.addLayer(L.marker(data.results[i].latlng));
+    }
+  });
+  
+///////////// PLOTTING & STYLING POINTS ///////////
+  function highlightFeature(e) {
+    var layer = e.target;
+
+    layer.setStyle({
+      stroke: true,
+      weight: 5,
+      color: '#454545', //#171717
+      opacity: 1,
+      // dashArray: '',
+      fillOpacity: 0.6
+    });
+
+
+    layer.bringToFront();
+    info.update(layer.feature.properties);
+  }
+
+  function resetHighlight(e) {
+    geojson.resetStyle(e.target);
+    info.update();
+  }
+
+  function onEachFeature(feature, layer) {
+    layer.on({
+      mouseover: highlightFeature,
+      mouseout: resetHighlight,
+    });
+  }
+
+  // function style(feature) {
+  //   return {
+  //     weight: 1,
+  //     opacity: 1,
+  //     color: 'white',
+  //     fillOpacity: 0.7,
+  //     fillColor: 'blue',
+  //   };
+  // }
+
+  // var geojson = L.geoJson(statesData, {
+  //   style: style,
+  //   onEachFeature: onEachFeature
+  // }).addTo(map);
+
+  var styleStroke = true;
+  var styleWeight = 1;
+  var stylefillOpacity = 0.5;
+  var styleOpacity = 0.4;
+  var styleColor = 'black';
+
+  var geojson = L.geoJson(statesData,{
+    onEachFeature: onEachFeature,
+
+    style: function(feature) {
+          switch (feature.properties.AOR) {
+            case "Empower": return {fillColor: "#800000", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            //
+              case "David Newcomer": return {fillColor: "#F7EF99", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Derek Baltimore": return {fillColor: "#77A6B6", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Earvin Echols": return {fillColor: "#A0E8AF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Misti Firestone": return {fillColor: "#E0C1B3", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            //
+            case "GA - Scott Kempner": return {fillColor: "#fabebe", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "MP - Jeff Slibowski": return {fillColor: "#9A6324", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "MP - Tim Mickelson": return {fillColor: "#f58231", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "MP - Bill Cole": return {fillColor: "#ffd8b1", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "MP - Brian Anderson": return {fillColor: "#808000", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "MP - Craig Lewis": return {fillColor: "#ffe119", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "MP - Debbie Withrow": return {fillColor: "#fffac8", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "MP - Debra Dryden": return {fillColor: "#bfef45", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "MP - Ed Ward": return {fillColor: "#3cb44b", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "MP - Julie Hardie": return {fillColor: "#469990", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "MP - Marco Radwick": return {fillColor: "#42d4f4", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "MP - Mimi Miranda": return {fillColor: "#000075", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "MP - Robert Norris": return {fillColor: "#4363d8", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "MP - Teresa Nansen": return {fillColor: "#911eb4", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "GA - Mark Mabaquiao": return {fillColor: "#e6beff", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "RA - Ann Salameh": return {fillColor: "#f032e6", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "RA - Annalisa Waunch": return {fillColor: "#a9a9a9", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "RA - Aristead Sherrod": return {fillColor: "#ffffff", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "RA - Brad Surrett": return {fillColor: "#00EAFF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "RA - Brandon Burum": return {fillColor: "#AA00FF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "RA - Greg Mistak": return {fillColor: "#FF7F00", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "RA - James Harris": return {fillColor: "#BFFF00", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "RA - Jim Archer": return {fillColor: "#0095FF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "RA - Kevin Shay": return {fillColor: "#FF00AA", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            //
+              case "RA - Kevin Shay (F, Sat)": return {fillColor: "#FF00AA", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "RA - Kevin Shay (M, W)": return {fillColor: "#FF00AA", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "RA - Kevin Shay (T, Th)": return {fillColor: "#FF00AA", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            //
+            case "RA - Mike Fehrenbacher": return {fillColor: "#B9D7ED", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "RA - Steven Foster": return {fillColor: "#23628F", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "Steve Waunch": return {fillColor: "#AA00FF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            default: return {fillColor: "rgb(0,0,0,0.3)", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+          }
+        },
+        filter: allFilter
+
+  }).addTo(map);
+
+function allFilter(feature) {
+  //return feature.properties.AGENT !== "0" && feature.properties.AGENT !== "#N/A"
+  return feature.properties.AOR !== ""
+};
+
+var info = L.control();
+
+info.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+    this.update();
+    return this._div;
+};
+
+// method that we will use to update the control based on feature properties passed
+info.update = function (props) {
+    this._div.innerHTML = '<h4>Details</h4>' +  (props ?
+        '<b>' + 'ZIP: ' + '</b>' + props.ZCTA5CE10 + '<br/>' + '<b>AOR: </b>' + props.AOR 
+        : 'Hover over a zip');
+};
+
+info.addTo(map);
+
+// //////////// UPDATING THE BUTTONS /////////////////
+// var firstOpacity = 0.8;
+// var secondOpacity = 0.3;
+// var secondStroke = true;
+// var secondWeight = 1;
+
+
+$("#Reset").click(function() {
+
+if (screen.width >= 1500) {
+  map.flyTo([40.002962,-102.051090], 5);
+} else {
+  map.flyTo([40.002962,-102.051090], 4);
+}});
+
+
+
+$("#Empower").click(function() {
+
+  // BOUNDS TEST
+  map.flyToBounds([[42.481345,-87.550204],[37.061169,-94.006638]])});
+
+//////
+
+$("#David-Newcomer").click(function() {
+//var bounds = map.getBounds();
+//console.log(bounds);
+  // BOUNDS TEST
+  map.flyToBounds([[30.954135, -97.487182],[28.948151, -99.6239809]])});
+
+$("#Derek-Baltimore").click(function() {
+// var bounds = map.getBounds();
+// console.log(bounds);
+  // BOUNDS TEST
+  map.flyToBounds([[37.378678, -87.796894],[33.609824, -92.262837]])});
+
+$("#Earvin-Echols").click(function() {
+// var bounds = map.getBounds();
+// console.log(bounds);
+  // BOUNDS TEST
+  map.flyToBounds([[36.637617, -87.571589],[32.833492, -92.037531]])});
+
+$("#Misti-Firestone").click(function() {
+//var bounds = map.getBounds();
+//console.log(bounds);
+  // BOUNDS TEST
+  map.flyToBounds([[30.271245, -97.487182],[28.2514901, -99.695434]])});
+
+/////////
+
+$("#Scott-Kempner").click(function() {
+
+  // BOUNDS TEST
+  map.flyToBounds([[41.993019,-87.613775],[41.674038,-88.211014]])});
+
+
+$("#Mark-Mabaquiao").click(function() {
+//var bounds = map.getBounds();
+//console.log(bounds);
+  // BOUNDS TEST
+  map.flyToBounds([[42.106708,-87.663076],[41.99111,-87.821026]])});
+
+
+
+$("#Bill-Cole").click(function() {
+
+//var bounds = map.getBounds();
+//console.log(bounds);
+
+  // BOUNDS TEST
+  map.flyToBounds([[48.333855,-122.492613],[47.53864,-124.635404]])});
+
+
+
+$("#Brian-Anderson").click(function() {
+  
+//var bounds = map.getBounds();
+//console.log(bounds);
+
+  // BOUNDS TEST
+  map.flyToBounds([[38.204152,-90.458281],[35.065559,-97.003301]])});
+
+
+
+$("#Craig-Lewis").click(function() {
+  
+//var bounds = map.getBounds();
+//console.log(bounds);
+
+  // BOUNDS TEST
+  map.flyToBounds([[34.976125,-83.320199],[34.086211,-84.144329]])});
+
+
+
+$("#Debbie-Withrow").click(function() {
+  
+//var bounds = map.getBounds();
+//console.log(bounds);
+
+  // BOUNDS TEST
+  map.flyToBounds([[39.951286,-94.163578],[38.624513,-95.748267]])});
+
+
+
+
+$("#Debra-Dryden").click(function() {
+  
+//var bounds = map.getBounds();
+//console.log(bounds);
+
+  // BOUNDS TEST
+  map.flyToBounds([[47.461156,-122.227504],[47.060925,-122.77848]])});
+
+
+
+
+$("#Ed-Ward").click(function() {
+  
+//var bounds = map.getBounds();
+//console.log(bounds);
+
+  // BOUNDS TEST
+  map.flyToBounds([[38.697686,-90.187001],[37.754571,-91.313445]])});
+
+
+
+
+$("#Jeff-Slibowski").click(function() {
+  
+//var bounds = map.getBounds();
+//console.log(bounds);
+
+  // BOUNDS TEST
+  map.flyToBounds([[40.540243,-93.619004],[38.72376,-95.645933]])});
+
+
+
+
+$("#Julie-Hardie").click(function() {
+  
+//var bounds = map.getBounds();
+//console.log(bounds);
+
+  // BOUNDS TEST
+  map.flyToBounds([[48.21712,-121.140144],[47.557085,-122.374193]])});
+
+
+
+
+$("#Marco-Radwick").click(function() {
+  
+//var bounds = map.getBounds();
+//console.log(bounds);
+
+  // BOUNDS TEST
+  map.flyToBounds([[47.754413,-121.939288],[47.391319,-122.407349]])});
+
+
+
+
+$("#Mimi-Miranda").click(function() {
+  
+// var bounds = map.getBounds();
+// console.log(bounds);
+
+//   BOUNDS TEST
+  map.flyToBounds([[39.183555,-90.1923971],[38.702256,-91.253305]])});
+
+
+
+
+$("#Robert-Norris").click(function() {
+
+  // BOUNDS TEST
+  map.flyToBounds([[36.963522,-94.441795],[35.151594,-96.890431]])});
+
+
+
+$("#Teresa-Nansen").click(function() {
+
+  // BOUNDS TEST
+  map.flyToBounds([[47.431696,-121.374163],[46.77591,-122.557218]])});
+
+
+
+$("#Tim-Mickelson").click(function() {
+
+  // BOUNDS TEST
+  map.flyToBounds([[47.584223,-121.791951],[47.152606,-122.36281]])});
+
+
+
+
+$("#Ann-Salameh").click(function() {
+
+  // BOUNDS TEST
+  map.flyToBounds([[41.831794,-87.83293],[41.423643,-88.218784]])});
+
+
+
+
+$("#Annalisa-Waunch").click(function() {
+
+  // BOUNDS TEST
+  map.flyToBounds([[47.5334,-121.504819],[46.402675,-124.203548]])});
+
+
+
+
+$("#Aristead-Sherrod").click(function() {
+
+  // BOUNDS TEST
+  map.flyToBounds([[41.940293,-87.646857],[41.602523,-87.962618]])});
+
+
+
+
+
+$("#Brad-Surrett").click(function() {
+
+  // BOUNDS TEST
+  map.flyToBounds([[33.897873,-84.252804],[33.771079,-84.404537]])});
+
+
+
+
+$("#Brandon-Burum").click(function() {
+
+  // BOUNDS TEST
+  map.flyToBounds([[41.902042,-87.56147],[41.508774,-87.670664]])});
+
+
+
+
+$("#Greg-Mistak").click(function() {
+
+  // BOUNDS TEST
+  map.flyToBounds([[42.092234,-87.685549],[41.979388,-87.99734]])});
+
+
+
+
+$("#James-Harris").click(function() {
+
+  // BOUNDS TEST
+  map.flyToBounds([[41.867566,-87.552739],[41.109505,-87.897917]])});
+
+
+
+
+$("#Jim-Archer").click(function() {
+
+  // BOUNDS TEST
+  map.flyToBounds([[30.801782,-97.384111],[30.43963,-98.208732]])});
+
+
+
+
+$("#Kevin-Shay").click(function() {
+
+  // BOUNDS TEST
+  map.flyToBounds([[31.686814,-96.83055],[29.844013,-98.350878]])});
+
+
+
+
+$("#Mike-Fehrenbacher").click(function() {
+
+  // BOUNDS TEST
+  map.flyToBounds([[42.114687,-87.789483],[41.836558,-88.513208]])});
+
+
+
+
+$("#Steven-Foster").click(function() {
+
+  // BOUNDS TEST
+  map.flyToBounds([[41.994855,-87.632231],[41.902172,-87.880713]])});
+
+
+
+
+$("#Steve-Waunch").click(function() {
+
+  // BOUNDS TEST
+  map.flyToBounds([[48.185851,-116.627768],[47.080905,-118.208232]])});
+
+
+
+
+
+</script>
+
+</body>
+
+</html>
