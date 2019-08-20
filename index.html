@@ -65,6 +65,9 @@
 <button id="Earvin-Echols">Earvin Echols</button>
 <button id="Misti-Firestone">Misti Firestone</button>
 
+<button id="Shirley-Bell">Shirley Bell</button>
+<button id="Blanche-Hayden">Blanche Hayden</button>
+
 <button id="Mark-Mabaquiao">Mark Mabaquiao</button>
 <button id="Scott-Kempner">Scott Kempner</button>
 <button id="Bill-Cole">Bill Cole</button>
@@ -203,12 +206,17 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
     style: function(feature) {
           switch (feature.properties.AOR) {
             case "Empower": return {fillColor: "#800000", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
             //
               case "David Newcomer": return {fillColor: "#F7EF99", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
               case "Derek Baltimore": return {fillColor: "#77A6B6", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
               case "Earvin Echols": return {fillColor: "#A0E8AF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
               case "Misti Firestone": return {fillColor: "#E0C1B3", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
+              case "Shirley Bell": return {fillColor: "#983628", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Blanche Hayden": return {fillColor: "#E2AEDD", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             //
+
             case "GA - Scott Kempner": return {fillColor: "#fabebe", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "MP - Jeff Slibowski": return {fillColor: "#9A6324", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "MP - Tim Mickelson": return {fillColor: "#f58231", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
@@ -317,6 +325,19 @@ $("#Misti-Firestone").click(function() {
 //console.log(bounds);
   // BOUNDS TEST
   map.flyToBounds([[30.271245, -97.487182],[28.2514901, -99.695434]])});
+
+$("#Shirley-Bell").click(function() {
+// var bounds = map.getBounds();
+// console.log(bounds);
+  // BOUNDS TEST
+  map.flyToBounds([[35.719895, -87.492370],[33.818088, -91.183776]])});
+
+$("#Blanche-Hayden").click(function() {
+var bounds = map.getBounds();
+console.log(bounds);
+  // BOUNDS TEST
+  map.flyToBounds([[36.0425657, -104.556884],[34.14831309, -108.24829101]])});
+
 
 /////////
 
