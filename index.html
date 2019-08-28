@@ -57,44 +57,57 @@
 <div class="button-container">
 <div class="button-title">AGENTS</div>
 <div class="button-group">
+
 <button id="Reset">Reset Map</button>
-<button id="Empower">Empower</button>
-
-<button id="David-Newcomer">David Newcomer</button>
-<button id="Derek-Baltimore">Derek Baltimore</button>
-<button id="Earvin-Echols">Earvin Echols</button>
-<button id="Misti-Firestone">Misti Firestone</button>
-
-<button id="Shirley-Bell">Shirley Bell</button>
-<button id="Blanche-Hayden">Blanche Hayden</button>
-
-<button id="Mark-Mabaquiao">Mark Mabaquiao</button>
-<button id="Scott-Kempner">Scott Kempner</button>
-<button id="Bill-Cole">Bill Cole</button>
-<button id="Brian-Anderson" >Brian Anderson</button>
-<button id="Craig-Lewis" >Craig Lewis</button>
-<button id="Debbie-Withrow" >Debbie Withrow</button>
-<button id="Debra-Dryden" >Debra Dryden</button>
-<button id="Ed-Ward" >Ed Ward</button>
-<button id="Jeff-Slibowski" >Jeff Slibowski</button>
-<button id="Julie-Hardie" >Julie Hardie</button>
-<button id="Marco-Radwick" >Marco Radwick</button>
-<button id="Mimi-Miranda" >Mimi Miranda</button>
-<button id="Robert-Norris" >Robert Norris</button>
-<button id="Teresa-Nansen" >Teresa Nansen</button>
-<button id="Tim-Mickelson" >Tim Mickelson</button>
 <button id="Ann-Salameh" >Ann Salameh</button>
 <button id="Annalisa-Waunch" >Annalisa Waunch</button>
 <button id="Aristead-Sherrod" >Aristead Sherrod</button>
+<button id="Betty-Jo" >Betty Jo</button>
+<button id="Bill-Cole">Bill Cole</button>
+<button id="Blanche-Hayden">Blanche Hayden</button>
 <button id="Brad-Surrett" >Brad Surrett</button>
 <button id="Brandon-Burum" >Brandon Burum</button>
+<button id="Brian-Anderson" >Brian Anderson</button>
+<button id="Chris" >Chris</button>
+<button id="Craig-Lewis" >Craig Lewis</button>
+<button id="David-Newcomer">David Newcomer</button>
+<button id="David-Stein">David Stein</button>
+<button id="Debbie-Withrow" >Debbie Withrow</button>
+<button id="Debra-Dryden" >Debra Dryden</button>
+<button id="Derek-Baltimore">Derek Baltimore</button>
+<button id="Dwain-Thompson">Dwain Thompson</button>
+<button id="Earvin-Echols">Earvin Echols</button>
+<button id="Ed-Ward" >Ed Ward</button>
+<button id="Empower">Empower</button>
+<button id="Gail">Gail</button>
+<button id="Gary-Omat">Gary Omat</button>
 <button id="Greg-Mistak" >Greg Mistak</button>
 <button id="James-Harris" >James Harris</button>
+<button id="Jeff-Slibowski" >Jeff Slibowski</button>
 <button id="Jim-Archer" >Jim Archer</button>
+<button id="John-Brush">John Brush</button>
+<button id="Jose">Jose</button>
+<button id="Julie-Hardie" >Julie Hardie</button>
+<button id="Kandy-Gallagher" >Kandy Gallagher</button>
 <button id="Kevin-Shay" >Kevin Shay</button>
+<button id="Marco-Radwick" >Marco Radwick</button>
+<button id="Mark-Mabaquiao">Mark Mabaquiao</button>
 <button id="Mike-Fehrenbacher" >Mike Fehrenbacher</button>
-<button id="Steven-Foster" >Steven Foster</button>
+<button id="Mimi-Miranda" >Mimi Miranda</button>
+<button id="Misti-Firestone">Misti Firestone</button>
+<button id="Rich-Behrends">Rich Behrends</button>
+<button id="Robbie-Swensen">Robbie Swensen</button>
+<button id="Robert-Norris" >Robert Norris</button>
+<button id="Romina-Chen" >Romina Chen</button>
+<button id="Scott-Kempner">Scott Kempner</button>
+<button id="Shirley-Bell">Shirley Bell</button>
 <button id="Steve-Waunch" >Steve Waunch</button>
+<button id="Steven-Foster" >Steven Foster</button>
+<button id="Teresa-Len" >Teresa Len</button>
+<button id="Teresa-Nansen" >Teresa Nansen</button>
+<button id="Tim-Mickelson" >Tim Mickelson</button>
+
+
 </div>
 </div>
 </div>
@@ -208,25 +221,44 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
             case "Empower": return {fillColor: "#800000", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
             //
-              case "David Newcomer": return {fillColor: "#F7EF99", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
-              case "Derek Baltimore": return {fillColor: "#77A6B6", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
-              case "Earvin Echols": return {fillColor: "#A0E8AF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
-              case "Misti Firestone": return {fillColor: "#E0C1B3", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "David Newcomer (TeamUp)": return {fillColor: "#F7EF99", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Derek Baltimore (TeamUp)": return {fillColor: "#77A6B6", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Earvin Echols (TeamUp)": return {fillColor: "#A0E8AF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Misti Firestone (TeamUp)": return {fillColor: "#E0C1B3", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
-              case "Shirley Bell": return {fillColor: "#983628", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Shirley Bell (TeamUp)": return {fillColor: "#983628", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
               case "Blanche Hayden": return {fillColor: "#E2AEDD", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
+              case "Chris (TeamUp)": return {fillColor: "#F56476", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Gary Omat (TeamUp)": return {fillColor: "#F5E9E2", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "David Stein (TeamUp)": return {fillColor: "#BE3E82", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Teresa Len (TeamUp)": return {fillColor: "#97D8B2", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "John Brush (TeamUp)": return {fillColor: "#531253", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Romina Chen (TeamUp)": return {fillColor: "#EAEBED", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Jose (TeamUp)": return {fillColor: "#D44D5C", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
+              case "Dwain Thompson": return {fillColor: "#AA5A4F", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Brad Surrett": return {fillColor: "#EBCBF4", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Sandra": return {fillColor: "#7C9299", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Gail": return {fillColor: "#FC440F", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Rich Behrends": return {fillColor: "#1E3888", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Kandy Gallagher": return {fillColor: "#FFAD69", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Betty Jo": return {fillColor: "#9C3848", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
+              case "Robbie Swensen": return {fillColor: "#603140", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
             //
 
             case "GA - Scott Kempner": return {fillColor: "#fabebe", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "MP - Jeff Slibowski": return {fillColor: "#9A6324", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "MP - Tim Mickelson": return {fillColor: "#f58231", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
-            case "MP - Bill Cole": return {fillColor: "#ffd8b1", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "MP - Bill Cole": return {fillColor: "#957964", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "MP - Brian Anderson": return {fillColor: "#808000", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "MP - Craig Lewis": return {fillColor: "#ffe119", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "MP - Debbie Withrow": return {fillColor: "#fffac8", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "MP - Debra Dryden": return {fillColor: "#bfef45", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "MP - Ed Ward": return {fillColor: "#3cb44b", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
-            case "MP - Julie Hardie": return {fillColor: "#469990", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "MP - Julie Hardie": return {fillColor: "#D3D57C", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "MP - Marco Radwick": return {fillColor: "#42d4f4", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "MP - Mimi Miranda": return {fillColor: "#000075", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "MP - Robert Norris": return {fillColor: "#4363d8", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
@@ -235,7 +267,6 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
             case "RA - Ann Salameh": return {fillColor: "#f032e6", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "RA - Annalisa Waunch": return {fillColor: "#a9a9a9", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "RA - Aristead Sherrod": return {fillColor: "#ffffff", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
-            case "RA - Brad Surrett": return {fillColor: "#00EAFF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "RA - Brandon Burum": return {fillColor: "#AA00FF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "RA - Greg Mistak": return {fillColor: "#FF7F00", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "RA - James Harris": return {fillColor: "#BFFF00", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
@@ -293,7 +324,64 @@ if (screen.width >= 1500) {
   map.flyTo([40.002962,-102.051090], 4);
 }});
 
+// NEW ADDITIONS //
 
+$("#Betty-Jo").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[32.660280993987016, -80.2348206641],[31.68035838752, -81.62321788]])});
+
+$("#Chris").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[27.5168358709191, -79.681155166],[26.4853628306723, -81.0695523837]])});
+
+$("#David-Stein").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[26.6038776858688, -79.8306674369],[26.085155604440, -80.5248660453]])});
+
+$("#Dwain-Thompson").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[35.2702667511849, -83.5265400756],[33.3580384665159, -86.303334509]])});
+
+$("#Gail").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[35.0575131201145, -79.43234078159],[33.1403959370388, -82.2091352151]])});
+
+$("#Gary-Omat").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[27.09717129759295, -79.5038527434],[26.0618588254348, -80.8922499602]])});
+
+$("#John-Brush").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[26.2515997737121, -80.023456859],[25.7313046713456, -80.7176554675]])});
+
+$("#Jose").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[26.10432488074999, -79.8754936587],[25.5833780199336, -80.5696922671]])});
+
+$("#Kandy-Gallagher").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[33.09056552791, -80.4646153386994],[32.1153250621822, -81.85301255549]])});
+
+$("#Rich-Behrends").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[33.7905540379527, -79.23938230270],[31.84489181044088, -82.0161767363]])});
+
+$("#Robbie-Swensen").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[49.08607351677237, -121.0419736349],[47.546474275917, -123.8187680685]])});
+
+$("#Romina-Chen").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[26.2028703851386, -79.8932523349],[25.682359249755, -80.58745094332]])});
+
+$("#Teresa-Len").click(function() {
+var bounds = map.getBounds();
+console.log(bounds);
+  // BOUNDS TEST
+  map.flyToBounds([[26.43244774361512, -79.8719787597],[25.91295770923794, -80.5661773681]])});
+
+
+// END NEW ADDITIONS //
 
 $("#Empower").click(function() {
 
@@ -333,8 +421,8 @@ $("#Shirley-Bell").click(function() {
   map.flyToBounds([[35.719895, -87.492370],[33.818088, -91.183776]])});
 
 $("#Blanche-Hayden").click(function() {
-var bounds = map.getBounds();
-console.log(bounds);
+// var bounds = map.getBounds();
+// console.log(bounds);
   // BOUNDS TEST
   map.flyToBounds([[36.0425657, -104.556884],[34.14831309, -108.24829101]])});
 
@@ -512,7 +600,7 @@ $("#Aristead-Sherrod").click(function() {
 $("#Brad-Surrett").click(function() {
 
   // BOUNDS TEST
-  map.flyToBounds([[33.897873,-84.252804],[33.771079,-84.404537]])});
+  map.flyToBounds([[34.299236787351,-83.61413762],[33.33744673456,-85.002534841]])});
 
 
 
