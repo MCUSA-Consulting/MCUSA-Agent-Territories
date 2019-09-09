@@ -96,6 +96,7 @@
 <button id="Mike-Fehrenbacher" >Mike Fehrenbacher</button>
 <button id="Mimi-Miranda" >Mimi Miranda</button>
 <button id="Misti-Firestone">Misti Firestone (TeamUp)</button>
+<button id="Patrick-Hood">Patrick Hood</button>
 <button id="Rich-Behrends">Rich Behrends</button>
 <button id="Robbie-Swensen">Robbie Swensen</button>
 <button id="Robert-Norris" >Robert Norris</button>
@@ -250,6 +251,8 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
               case "Mark Woods (TeamUp)": return {fillColor: "#FBFAF8", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
+              case "Patrick Hood": return {fillColor: "#EA7317", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
             //
 
             case "GA - Scott Kempner": return {fillColor: "#fabebe", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
@@ -377,15 +380,16 @@ $("#Romina-Chen").click(function() {
   // BOUNDS TEST
   map.flyToBounds([[26.2028703851386, -79.8932523349],[25.682359249755, -80.58745094332]])});
 
+
 $("#Teresa-Len").click(function() {
 var bounds = map.getBounds();
 console.log(bounds);
   // BOUNDS TEST
   map.flyToBounds([[26.43244774361512, -79.8719787597],[25.91295770923794, -80.5661773681]])});
 
-$("#Mark-Woods").click(function() {
+$("#Patrick-Hood").click(function() {
   // BOUNDS TEST
-  map.flyToBounds([[35.609347631328795, -89.29275512695],[34.662628267973986, -90.68115234375]])});
+  map.flyToBounds([[31.606603208558102, -92.43347167968],[27.581322299197705, -99.81628417968]])});
 
 
 // END NEW ADDITIONS //
@@ -398,8 +402,8 @@ $("#Empower").click(function() {
 //////
 
 $("#David-Newcomer").click(function() {
-//var bounds = map.getBounds();
-//console.log(bounds);
+var bounds = map.getBounds();
+console.log(bounds);
   // BOUNDS TEST
   map.flyToBounds([[30.954135, -97.487182],[28.948151, -99.6239809]])});
 
