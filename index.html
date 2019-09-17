@@ -68,7 +68,9 @@
 <button id="Brad-Surrett" >Brad Surrett</button>
 <button id="Brandon-Burum" >Brandon Burum</button>
 <button id="Brian-Anderson" >Brian Anderson</button>
+<button id="Britt-Brown">Britt Brown (TeamUp)</button>
 <button id="Chris" >Chris</button>
+<button id="Clay-Parker">Clay Parker (TeamUp)</button>
 <button id="Craig-Lewis" >Craig Lewis</button>
 <button id="David-Newcomer">David Newcomer (TeamUp)</button>
 <button id="David-Stein">David Stein</button>
@@ -253,6 +255,10 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
               case "Patrick Hood": return {fillColor: "#EA7317", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
+              case "Britt Brown (TeamUp)": return {fillColor: "#B47553", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
+              case "Clay Parker (TeamUp)": return {fillColor: "#F4E8C8", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
             //
 
             case "GA - Scott Kempner": return {fillColor: "#fabebe", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
@@ -339,6 +345,14 @@ $("#Betty-Jo").click(function() {
 $("#Chris").click(function() {
   // BOUNDS TEST
   map.flyToBounds([[27.5168358709191, -79.681155166],[26.4853628306723, -81.0695523837]])});
+
+$("#Britt-Brown").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[35.87553388170378, -92.0654296875],[32.0358483074036, -99.4482421875]])});
+
+$("#Clay-Parker").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[34.55211516100778, -91.950073242187],[30.652407342707672, -99.33288574218]])});
 
 $("#David-Stein").click(function() {
   // BOUNDS TEST
