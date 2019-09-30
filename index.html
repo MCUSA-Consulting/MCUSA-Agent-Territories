@@ -92,6 +92,7 @@
 <button id="Julie-Hardie" >Julie Hardie</button>
 <button id="Kandy-Gallagher" >Kandy Gallagher</button>
 <button id="Kevin-Shay" >Kevin Shay</button>
+<button id="Lynn">Lynn (TeamUp)</button>
 <button id="Marco-Radwick" >Marco Radwick</button>
 <button id="Mark-Mabaquiao">Mark Mabaquiao</button>
 <button id="Mark-Woods">Mark Woods (TeamUp)</button>
@@ -259,6 +260,8 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
               case "Clay Parker (TeamUp)": return {fillColor: "#F4E8C8", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
+              case "Lynn (TeamUp)": return {fillColor: "#DB5461", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
             //
 
             case "GA - Scott Kempner": return {fillColor: "#fabebe", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
@@ -394,6 +397,10 @@ $("#Robbie-Swensen").click(function() {
 $("#Romina-Chen").click(function() {
   // BOUNDS TEST
   map.flyToBounds([[26.2028703851386, -79.8932523349],[25.682359249755, -80.58745094332]])});
+
+$("#Lynn").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[37.182300432034374, -92.29888916015626],[35.315225776538014, -95.99029541015626]])});
 
 
 $("#Teresa-Len").click(function() {
