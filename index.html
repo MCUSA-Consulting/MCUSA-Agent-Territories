@@ -71,6 +71,7 @@
 <button id="Britt-Brown">Britt Brown (TeamUp)</button>
 <button id="Chris" >Chris</button>
 <button id="Clay-Parker">Clay Parker (TeamUp)</button>
+<button id="Coral-Harris">Coral Harris (TeamUp)</button>
 <button id="Craig-Lewis" >Craig Lewis</button>
 <button id="David-Newcomer">David Newcomer (TeamUp)</button>
 <button id="David-Stein">David Stein</button>
@@ -296,6 +297,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
             case "RA - Mike Fehrenbacher": return {fillColor: "#B9D7ED", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "RA - Steven Foster": return {fillColor: "#23628F", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "Steve Waunch": return {fillColor: "#AA00FF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "Coral Harris (TeamUp)": return {fillColor: "#FF7F50", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             default: return {fillColor: "rgb(0,0,0,0.3)", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
           }
         },
@@ -401,9 +403,13 @@ $("#Romina-Chen").click(function() {
   // BOUNDS TEST
   map.flyToBounds([[26.2028703851386, -79.8932523349],[25.682359249755, -80.58745094332]])});
 
-$("#Lynn").click(function() {
+// $("#Lynn").click(function() {
+//   // BOUNDS TEST
+//   map.flyToBounds([[37.182300432034374, -92.29888916015626],[35.315225776538014, -95.99029541015626]])});
+
+$("#Coral-Harris").click(function() {
   // BOUNDS TEST
-  map.flyToBounds([[37.182300432034374, -92.29888916015626],[35.315225776538014, -95.99029541015626]])});
+  map.flyToBounds([[36.024649501258786, -88.70652033102265],[34.12997576193077, -91.35971857321015]])});
 
 
 $("#Teresa-Len").click(function() {
