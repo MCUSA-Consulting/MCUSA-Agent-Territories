@@ -95,7 +95,7 @@
 <button id="Lynn">Lynn (TeamUp)</button>
 <button id="Marco-Radwick" >Marco Radwick</button>
 <button id="Mark-Mabaquiao">Mark Mabaquiao</button>
-<button id="Mark-Woods">Mark Woods (TeamUp)</button>
+<!-- <button id="Mark-Woods">Mark Woods (TeamUp)</button> -->
 <button id="Mike-Fehrenbacher" >Mike Fehrenbacher</button>
 <button id="Mimi-Miranda" >Mimi Miranda</button>
 <button id="Misti-Firestone">Misti Firestone (TeamUp)</button>
@@ -105,7 +105,7 @@
 <button id="Robert-Norris" >Robert Norris</button>
 <button id="Romina-Chen" >Romina Chen</button>
 <button id="Scott-Kempner">Scott Kempner</button>
-<button id="Shirley-Bell">Shirley Bell (TeamUp)</button>
+<!-- <button id="Shirley-Bell">Shirley Bell (TeamUp)</button> -->
 <button id="Steve-Waunch" >Steve Waunch</button>
 <button id="Steven-Foster" >Steven Foster</button>
 <button id="Teresa-Len" >Teresa Len</button>
@@ -231,7 +231,8 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
               case "Earvin Echols (TeamUp)": return {fillColor: "#A0E8AF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
               case "Misti Firestone (TeamUp)": return {fillColor: "#E0C1B3", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
-              case "Shirley Bell (TeamUp)": return {fillColor: "#983628", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              // case "Shirley Bell (TeamUp)": return {fillColor: "#983628", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              
               case "Blanche Hayden": return {fillColor: "#E2AEDD", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
               case "Chris": return {fillColor: "#F56476", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
@@ -252,7 +253,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
               case "Robbie Swensen": return {fillColor: "#603140", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
-              case "Mark Woods (TeamUp)": return {fillColor: "#FBFAF8", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              // case "Mark Woods (TeamUp)": return {fillColor: "#FBFAF8", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
               case "Patrick Hood": return {fillColor: "#EA7317", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
@@ -306,6 +307,8 @@ function allFilter(feature) {
   //return feature.properties.AGENT !== "0" && feature.properties.AGENT !== "#N/A"
   return feature.properties.AOR !== "" && feature.properties.AOR !== "Romina Chen" 
   && feature.properties.AOR !== "David Stein"
+  && feature.properties.AOR !== "Mark Woods (TeamUp)"
+  && feature.properties.AOR !== "Shirley Bell (TeamUp)"
 };
 
 var info = L.control();
@@ -447,11 +450,11 @@ $("#Misti-Firestone").click(function() {
   // BOUNDS TEST
   map.flyToBounds([[30.271245, -97.487182],[28.2514901, -99.695434]])});
 
-$("#Shirley-Bell").click(function() {
-// var bounds = map.getBounds();
-// console.log(bounds);
-  // BOUNDS TEST
-  map.flyToBounds([[35.719895, -87.492370],[33.818088, -91.183776]])});
+// $("#Shirley-Bell").click(function() {
+// // var bounds = map.getBounds();
+// // console.log(bounds);
+//   // BOUNDS TEST
+//   map.flyToBounds([[35.719895, -87.492370],[33.818088, -91.183776]])});
 
 $("#Blanche-Hayden").click(function() {
 // var bounds = map.getBounds();
