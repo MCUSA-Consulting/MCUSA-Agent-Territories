@@ -59,6 +59,7 @@
 <div class="button-group">
 
 <button id="Reset">Reset Map</button>
+<button id="Akers">Akers (TeamUp)</button>
 <button id="Ann-Salameh" >Ann Salameh</button>
 <button id="Annalisa-Waunch" >Annalisa Waunch</button>
 <button id="Aristead-Sherrod" >Aristead Sherrod</button>
@@ -90,17 +91,19 @@
 <button id="Jim-Archer" >Jim Archer</button>
 <button id="John-Brush">John Brush</button>
 <button id="Jose">Jose</button>
+<button id="Joyce-Rhyan">Joyce Rhyan (TeamUp)</button>
 <button id="Julie-Hardie" >Julie Hardie</button>
 <button id="Kandy-Gallagher" >Kandy Gallagher</button>
 <button id="Kevin-Shay" >Kevin Shay</button>
 <button id="Lynn">Lynn (TeamUp)</button>
 <button id="Marco-Radwick" >Marco Radwick</button>
 <button id="Mark-Mabaquiao">Mark Mabaquiao</button>
-<!-- <button id="Mark-Woods">Mark Woods (TeamUp)</button> -->
+<button id="Mark-Woods">Mark Woods (TeamUp)</button>
 <button id="Mike-Fehrenbacher" >Mike Fehrenbacher</button>
 <button id="Mimi-Miranda" >Mimi Miranda</button>
 <button id="Misti-Firestone">Misti Firestone (TeamUp)</button>
 <button id="Patrick-Hood">Patrick Hood</button>
+<button id="Rand-Grey">Rand Grey (TeamUp)</button>
 <button id="Rich-Behrends">Rich Behrends</button>
 <button id="Robbie-Swensen">Robbie Swensen</button>
 <button id="Robert-Norris" >Robert Norris</button>
@@ -215,7 +218,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
   var styleStroke = true;
   var styleWeight = 1;
-  var stylefillOpacity = 0.5;
+  var stylefillOpacity = 0.6;
   var styleOpacity = 0.4;
   var styleColor = 'black';
 
@@ -228,7 +231,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
             //
               case "David Newcomer (TeamUp)": return {fillColor: "#F7EF99", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
-              case "Derek Baltimore (TeamUp)": return {fillColor: "#77A6B6", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Derek Baltimore (TeamUp)": return {fillColor: "#515E63", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
               case "Earvin Echols (TeamUp)": return {fillColor: "#A0E8AF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
               case "Misti Firestone (TeamUp)": return {fillColor: "#E0C1B3", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
@@ -254,7 +257,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
               case "Robbie Swensen": return {fillColor: "#603140", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
-              // case "Mark Woods (TeamUp)": return {fillColor: "#FBFAF8", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Mark Woods (TeamUp)": return {fillColor: "#FBFAF8", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
               case "Patrick Hood": return {fillColor: "#EA7317", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
@@ -298,6 +301,13 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
             case "RA - Steven Foster": return {fillColor: "#23628F", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "Steve Waunch": return {fillColor: "#AA00FF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "Coral Harris (TeamUp)": return {fillColor: "#FF7F50", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
+            case "Rand Grey (TeamUp)": return {fillColor: "#ECA72C", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
+            case "Joyce Rhyan (TeamUp)": return {fillColor: "#96C5F7", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
+            case "Brieanna & Zachary Akers (TeamUp)": return {fillColor: "#44355B", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
             default: return {fillColor: "rgb(0,0,0,0.3)", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
           }
         },
@@ -309,7 +319,6 @@ function allFilter(feature) {
   //return feature.properties.AGENT !== "0" && feature.properties.AGENT !== "#N/A"
   return feature.properties.AOR !== "" && feature.properties.AOR !== "Romina Chen" 
   && feature.properties.AOR !== "David Stein"
-  && feature.properties.AOR !== "Mark Woods (TeamUp)"
   && feature.properties.AOR !== "Shirley Bell (TeamUp)"
 };
 
@@ -409,8 +418,15 @@ $("#Romina-Chen").click(function() {
 
 $("#Coral-Harris").click(function() {
   // BOUNDS TEST
-  map.flyToBounds([[35.915639846802826, -88.83270263671875],[34.018408350135594, -92.52410888671875]])});
+  map.flyToBounds([[36.07108680536104, -89.27764892578125],[34.17750480948301, -91.93084716796875]])});
 
+$("#Mark-Woods").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[35.89370075860367, -88.02814743619068],[33.995955351629846, -90.68134567837818]])});
+
+$("#Akers").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[36.59789527047428, -85.13580322265626],[34.71678860419918, -87.78900146484376]])});
 
 $("#Teresa-Len").click(function() {
 var bounds = map.getBounds();
@@ -442,13 +458,25 @@ $("#Derek-Baltimore").click(function() {
 // var bounds = map.getBounds();
 // console.log(bounds);
   // BOUNDS TEST
-  map.flyToBounds([[36.40804069936765, -88.0642899388566],[34.522419050591644, -91.7556961888566]])});
+  map.flyToBounds([[36.52070324010447, -88.472900390625],[34.637758265032566, -92.164306640625]])});
+
+$("#Rand-Grey").click(function() {
+// var bounds = map.getBounds();
+// console.log(bounds);
+  // BOUNDS TEST
+  map.flyToBounds([[36.46767762440039, -88.3024866371792],[34.58347190908252, -90.9556848793667]])});
 
 $("#Earvin-Echols").click(function() {
 // var bounds = map.getBounds();
 // console.log(bounds);
   // BOUNDS TEST
-  map.flyToBounds([[35.60596739216243, -87.80264544107106],[33.701508695244215, -91.49405169107106]])});
+  map.flyToBounds([[35.64622342390178, -88.10211181640626],[33.74270097816071, -91.79351806640626]])});
+
+$("#Joyce-Rhyan").click(function() {
+// var bounds = map.getBounds();
+// console.log(bounds);
+  // BOUNDS TEST
+  map.flyToBounds([[35.590342066230605, -89.2419839596469],[33.685520226820074, -91.89518220183442]])});
 
 $("#Misti-Firestone").click(function() {
 //var bounds = map.getBounds();
