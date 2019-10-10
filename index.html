@@ -54,8 +54,10 @@
 
 <!-- //////////////// BUTTON GROUP ///////////// -->  
 <div class="button-side">
+<div class="container-note">
 <div class="button-container">
 <div class="button-title">AGENTS</div>
+
 <div class="button-group">
 
 <button id="Reset">Reset Map</button>
@@ -82,7 +84,7 @@
 <button id="Dwain-Thompson">Dwain Thompson</button>
 <button id="Earvin-Echols">Earvin Echols (TeamUp)</button>
 <button id="Ed-Ward" >Ed Ward</button>
-<button id="Empower">Empower</button>
+<!-- <button id="Empower">Empower</button> -->
 <button id="Gail">Gail</button>
 <button id="Gary-Omat">Gary Omat</button>
 <button id="Greg-Mistak" >Greg Mistak</button>
@@ -118,6 +120,16 @@
 
 
 </div>
+</div>
+
+<div class="CSR-note">
+<strong><font size = "5"><u><center>If no agent comes up:</strong></font></u><br><br></center>
+
+<center><b>Empower</b> gets leads in TX, AR, TN, MS <br><br></center>
+
+<center>All other states go to <b>GoldenCare</b></center>
+</div>
+
 </div>
 </div>
 
@@ -227,7 +239,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
     style: function(feature) {
           switch (feature.properties.AOR) {
-            case "Empower": return {fillColor: "#800000", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            // case "Empower": return {fillColor: "#800000", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
             //
               case "David Newcomer (TeamUp)": return {fillColor: "#F7EF99", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
@@ -244,7 +256,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
               case "David Stein": return {fillColor: "#BE3E82", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
               case "Teresa Len": return {fillColor: "#97D8B2", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
               case "John Brush": return {fillColor: "#531253", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
-              case "Romina Chen": return {fillColor: "#EAEBED", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              case "Romina Chen": return {fillColor: "#96C5F7", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
               case "Jose": return {fillColor: "#D44D5C", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
               case "Dwain Thompson": return {fillColor: "#AA5A4F", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
@@ -317,9 +329,10 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
 function allFilter(feature) {
   //return feature.properties.AGENT !== "0" && feature.properties.AGENT !== "#N/A"
-  return feature.properties.AOR !== "" && feature.properties.AOR !== "Romina Chen" 
+  return feature.properties.AOR !== "" 
   && feature.properties.AOR !== "David Stein"
   && feature.properties.AOR !== "Shirley Bell (TeamUp)"
+  && feature.properties.AOR !== "Empower"
 };
 
 var info = L.control();
@@ -441,10 +454,10 @@ $("#Patrick-Hood").click(function() {
 
 // END NEW ADDITIONS //
 
-$("#Empower").click(function() {
+// $("#Empower").click(function() {
 
-  // BOUNDS TEST
-  map.flyToBounds([[42.481345,-87.550204],[37.061169,-94.006638]])});
+//   // BOUNDS TEST
+//   map.flyToBounds([[42.481345,-87.550204],[37.061169,-94.006638]])});
 
 //////
 
