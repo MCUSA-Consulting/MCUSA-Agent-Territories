@@ -330,7 +330,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 function allFilter(feature) {
   //return feature.properties.AGENT !== "0" && feature.properties.AGENT !== "#N/A"
   return feature.properties.AOR !== "" 
-  && feature.properties.AOR !== "David Stein"
+  // && feature.properties.AOR !== "David Stein"
   && feature.properties.AOR !== "Shirley Bell (TeamUp)"
   && feature.properties.AOR !== "Empower"
 };
