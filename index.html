@@ -90,6 +90,7 @@
 <button id="Greg-Mistak" >Greg Mistak</button>
 <button id="James-Harris" >James Harris</button>
 <button id="Jeff-Slibowski" >Jeff Slibowski</button>
+<button id="Jesus-Valvidia" >Jesus Valvidia</button>
 <button id="Jim-Archer" >Jim Archer</button>
 <button id="John-Brush">John Brush</button>
 <button id="Jose">Jose</button>
@@ -320,6 +321,9 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
             case "Brieanna & Zachary Akers (TeamUp)": return {fillColor: "#44355B", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
+            case "Jesus Valvidia": return {fillColor: "#BEEE62", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
+
             default: return {fillColor: "rgb(0,0,0,0.3)", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
           }
         },
@@ -450,6 +454,10 @@ console.log(bounds);
 $("#Patrick-Hood").click(function() {
   // BOUNDS TEST
   map.flyToBounds([[31.606603208558102, -92.43347167968],[27.581322299197705, -99.81628417968]])});
+
+$("#Jesus-Valvidia").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[32.21649144157106, -105.2766890463819],[31.231798581288963, -107.1223921713819]])});
 
 
 // END NEW ADDITIONS //
