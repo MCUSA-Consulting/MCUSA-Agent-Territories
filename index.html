@@ -88,6 +88,7 @@
 <button id="Gail">Gail</button>
 <button id="Gary-Omat">Gary Omat</button>
 <button id="Greg-Mistak" >Greg Mistak</button>
+<button id="Hector-Blanco" >Hector Blanco</button>
 <button id="James-Harris" >James Harris</button>
 <button id="Jeff-Slibowski" >Jeff Slibowski</button>
 <button id="Jesus-Valvidia" >Jesus Valvidia</button>
@@ -323,6 +324,8 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
             case "Jesus Valvidia": return {fillColor: "#BEEE62", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
+            case "Hector Blanco": return {fillColor: "#4B6858", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
 
             default: return {fillColor: "rgb(0,0,0,0.3)", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
           }
@@ -337,6 +340,7 @@ function allFilter(feature) {
   // && feature.properties.AOR !== "David Stein"
   && feature.properties.AOR !== "Shirley Bell (TeamUp)"
   && feature.properties.AOR !== "Empower"
+  && feature.properties.GEOID10 !== "79942"
 };
 
 var info = L.control();
@@ -458,6 +462,10 @@ $("#Patrick-Hood").click(function() {
 $("#Jesus-Valvidia").click(function() {
   // BOUNDS TEST
   map.flyToBounds([[32.21649144157106, -105.2766890463819],[31.231798581288963, -107.1223921713819]])});
+
+$("#Hector-Blanco").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[32.1477074251507, -105.13504028320314],[31.162280577565554, -106.98074340820314]])});
 
 
 // END NEW ADDITIONS //
