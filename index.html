@@ -64,6 +64,7 @@
 <button id="Akers">Akers (TeamUp)</button>
 <button id="Ann-Salameh" >Ann Salameh</button>
 <button id="Annalisa-Waunch" >Annalisa Waunch</button>
+<button id="Anthony-Cordova">Anthony Cordova</button>
 <button id="Aristead-Sherrod" >Aristead Sherrod</button>
 <button id="Betty-Jo" >Betty Jo</button>
 <button id="Bill-Cole">Bill Cole</button>
@@ -326,6 +327,8 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
             case "Hector Blanco": return {fillColor: "#4B6858", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
+            case "Anthony Cordova": return {fillColor: "#A9D3FF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
 
             default: return {fillColor: "rgb(0,0,0,0.3)", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
           }
@@ -341,6 +344,7 @@ function allFilter(feature) {
   && feature.properties.AOR !== "Shirley Bell (TeamUp)"
   && feature.properties.AOR !== "Empower"
   && feature.properties.GEOID10 !== "79942"
+  && feature.properties.GEOID10 !== "79839"
 };
 
 var info = L.control();
@@ -466,6 +470,10 @@ $("#Jesus-Valvidia").click(function() {
 $("#Hector-Blanco").click(function() {
   // BOUNDS TEST
   map.flyToBounds([[32.1477074251507, -105.13504028320314],[31.162280577565554, -106.98074340820314]])});
+
+$("#Anthony-Cordova").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[32.108142935755616, -106.09977722167969],[31.616524018623434, -107.0226287841797]])});
 
 
 // END NEW ADDITIONS //
