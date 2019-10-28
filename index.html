@@ -77,7 +77,7 @@
 <button id="Clay-Parker">Clay Parker (TeamUp)</button>
 <button id="Coral-Harris">Coral Harris (TeamUp)</button>
 <button id="Craig-Lewis" >Craig Lewis</button>
-<button id="David-Newcomer">David Newcomer (TeamUp)</button>
+<!-- <button id="David-Newcomer">David Newcomer (TeamUp)</button> -->
 <button id="David-Stein">David Stein</button>
 <button id="Debbie-Withrow" >Debbie Withrow</button>
 <button id="Debra-Dryden" >Debra Dryden</button>
@@ -106,7 +106,7 @@
 <button id="Mark-Woods">Mark Woods (TeamUp)</button>
 <button id="Mike-Fehrenbacher" >Mike Fehrenbacher</button>
 <button id="Mimi-Miranda" >Mimi Miranda</button>
-<button id="Misti-Firestone">Misti Firestone (TeamUp)</button>
+<!-- <button id="Misti-Firestone">Misti Firestone (TeamUp)</button> -->
 <button id="Patrick-Hood">Patrick Hood</button>
 <button id="Rand-Grey">Rand Grey (TeamUp)</button>
 <button id="Rich-Behrends">Rich Behrends</button>
@@ -245,10 +245,10 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
             // case "Empower": return {fillColor: "#800000", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
             //
-              case "David Newcomer (TeamUp)": return {fillColor: "#F7EF99", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              // case "David Newcomer (TeamUp)": return {fillColor: "#F7EF99", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
               case "Derek Baltimore (TeamUp)": return {fillColor: "#515E63", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
               case "Earvin Echols (TeamUp)": return {fillColor: "#A0E8AF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
-              case "Misti Firestone (TeamUp)": return {fillColor: "#E0C1B3", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              // case "Misti Firestone (TeamUp)": return {fillColor: "#E0C1B3", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
               // case "Shirley Bell (TeamUp)": return {fillColor: "#983628", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
               
@@ -342,6 +342,8 @@ function allFilter(feature) {
   return feature.properties.AOR !== "" 
   // && feature.properties.AOR !== "David Stein"
   && feature.properties.AOR !== "Shirley Bell (TeamUp)"
+  && feature.properties.AOR !== "Misti Firestone (TeamUp)"
+  && feature.properties.AOR !== "David Newcomer (TeamUp)"
   && feature.properties.AOR !== "Empower"
   && feature.properties.GEOID10 !== "79942"
   && feature.properties.GEOID10 !== "79839"
@@ -485,11 +487,11 @@ $("#Anthony-Cordova").click(function() {
 
 //////
 
-$("#David-Newcomer").click(function() {
-var bounds = map.getBounds();
-console.log(bounds);
-  // BOUNDS TEST
-  map.flyToBounds([[30.954135, -97.487182],[28.948151, -99.6239809]])});
+// $("#David-Newcomer").click(function() {
+// var bounds = map.getBounds();
+// console.log(bounds);
+//   // BOUNDS TEST
+//   map.flyToBounds([[30.954135, -97.487182],[28.948151, -99.6239809]])});
 
 $("#Derek-Baltimore").click(function() {
 // var bounds = map.getBounds();
@@ -515,11 +517,11 @@ $("#Joyce-Rhyan").click(function() {
   // BOUNDS TEST
   map.flyToBounds([[35.590342066230605, -89.2419839596469],[33.685520226820074, -91.89518220183442]])});
 
-$("#Misti-Firestone").click(function() {
-//var bounds = map.getBounds();
-//console.log(bounds);
-  // BOUNDS TEST
-  map.flyToBounds([[30.271245, -97.487182],[28.2514901, -99.695434]])});
+// $("#Misti-Firestone").click(function() {
+// //var bounds = map.getBounds();
+// //console.log(bounds);
+//   // BOUNDS TEST
+//   map.flyToBounds([[30.271245, -97.487182],[28.2514901, -99.695434]])});
 
 // $("#Shirley-Bell").click(function() {
 // // var bounds = map.getBounds();
