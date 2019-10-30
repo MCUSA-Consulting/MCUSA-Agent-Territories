@@ -96,7 +96,7 @@
 <button id="Jim-Archer" >Jim Archer</button>
 <button id="John-Brush">John Brush</button>
 <button id="Jose">Jose</button>
-<button id="Joyce-Rhyan">Joyce Rhyan (TeamUp)</button>
+<!-- <button id="Joyce-Rhyan">Joyce Rhyan (TeamUp)</button> -->
 <button id="Julie-Hardie" >Julie Hardie</button>
 <button id="Kandy-Gallagher" >Kandy Gallagher</button>
 <button id="Kevin-Shay" >Kevin Shay</button>
@@ -319,7 +319,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
             case "Rand Grey (TeamUp)": return {fillColor: "#ECA72C", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
-            case "Joyce Rhyan (TeamUp)": return {fillColor: "#96C5F7", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            // case "Joyce Rhyan (TeamUp)": return {fillColor: "#96C5F7", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
             case "Brieanna & Zachary Akers (TeamUp)": return {fillColor: "#44355B", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
@@ -344,6 +344,7 @@ function allFilter(feature) {
   && feature.properties.AOR !== "Shirley Bell (TeamUp)"
   && feature.properties.AOR !== "Misti Firestone (TeamUp)"
   && feature.properties.AOR !== "David Newcomer (TeamUp)"
+  && feature.properties.AOR !== "Joyce Rhyan (TeamUp)"
   && feature.properties.AOR !== "Empower"
   && feature.properties.GEOID10 !== "79942"
   && feature.properties.GEOID10 !== "79839"
@@ -511,11 +512,11 @@ $("#Earvin-Echols").click(function() {
   // BOUNDS TEST
   map.flyToBounds([[35.64622342390178, -88.10211181640626],[33.74270097816071, -91.79351806640626]])});
 
-$("#Joyce-Rhyan").click(function() {
-// var bounds = map.getBounds();
-// console.log(bounds);
-  // BOUNDS TEST
-  map.flyToBounds([[35.590342066230605, -89.2419839596469],[33.685520226820074, -91.89518220183442]])});
+// $("#Joyce-Rhyan").click(function() {
+// // var bounds = map.getBounds();
+// // console.log(bounds);
+//   // BOUNDS TEST
+//   map.flyToBounds([[35.590342066230605, -89.2419839596469],[33.685520226820074, -91.89518220183442]])});
 
 // $("#Misti-Firestone").click(function() {
 // //var bounds = map.getBounds();
