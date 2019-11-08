@@ -61,7 +61,7 @@
 <div class="button-group">
 
 <button id="Reset">Reset Map</button>
-<button id="Akers">Akers (TeamUp)</button>
+<button id="Akers">Akers</button>
 <button id="Ann-Salameh" >Ann Salameh</button>
 <button id="Annalisa-Waunch" >Annalisa Waunch</button>
 <button id="Anthony-Cordova">Anthony Cordova</button>
@@ -89,6 +89,7 @@
 <button id="Gail">Gail</button>
 <button id="Gary-Omat">Gary Omat</button>
 <button id="Greg-Mistak" >Greg Mistak</button>
+<button id="Harlan">Harlan</button>
 <button id="Hector-Blanco" >Hector Blanco</button>
 <button id="James-Harris" >James Harris</button>
 <button id="Jeff-Slibowski" >Jeff Slibowski</button>
@@ -102,6 +103,7 @@
 <button id="Kevin-Shay" >Kevin Shay</button>
 <button id="Lynn">Lynn (TeamUp)</button>
 <button id="Marco-Radwick" >Marco Radwick</button>
+<button id="Marilyn">Marilyn</button>
 <button id="Mark-Mabaquiao">Mark Mabaquiao</button>
 <button id="Mark-Woods">Mark Woods (TeamUp)</button>
 <button id="Mike-Fehrenbacher" >Mike Fehrenbacher</button>
@@ -321,13 +323,17 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
             // case "Joyce Rhyan (TeamUp)": return {fillColor: "#96C5F7", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
-            case "Brieanna & Zachary Akers (TeamUp)": return {fillColor: "#44355B", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "Brieanna & Zachary Akers": return {fillColor: "#44355B", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
             case "Jesus Valvidia": return {fillColor: "#BEEE62", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
             case "Hector Blanco": return {fillColor: "#4B6858", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
             case "Anthony Cordova": return {fillColor: "#A9D3FF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
+            case "Harlan": return {fillColor: "#EAC435", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
+            case "Marilyn": return {fillColor: "#918868", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
 
             default: return {fillColor: "rgb(0,0,0,0.3)", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
@@ -375,6 +381,10 @@ info.addTo(map);
 
 
 $("#Reset").click(function() {
+
+var bounds = map.getBounds();
+console.log(bounds);
+
 
 if (screen.width >= 1500) {
   map.flyTo([40.002962,-102.051090], 5);
@@ -477,6 +487,14 @@ $("#Hector-Blanco").click(function() {
 $("#Anthony-Cordova").click(function() {
   // BOUNDS TEST
   map.flyToBounds([[32.108142935755616, -106.09977722167969],[31.616524018623434, -107.0226287841797]])});
+
+$("#Harlan").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[36.708255852921134, -82.655106109021],[35.45862817869962, -85.28358511292726]])});
+
+$("#Marilyn").click(function() {
+  // BOUNDS TEST
+  map.flyToBounds([[36.45420500470497, -82.55667954631254],[35.20051938786092, -85.18515855021879]])});
 
 
 // END NEW ADDITIONS //
