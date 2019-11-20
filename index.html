@@ -337,6 +337,8 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
             case "ALL LEADS TO TROUTS": return {fillColor: "#FF0000", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
+            case "ALL LEADS TO GOLDENCARE": return {fillColor: "#DAA520", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
 
 
             default: return {fillColor: "rgb(0,0,0,0.3)", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
@@ -355,6 +357,8 @@ function allFilter(feature) {
   && feature.properties.AOR !== "David Newcomer (TeamUp)"
   && feature.properties.AOR !== "Joyce Rhyan (TeamUp)"
   && feature.properties.AOR !== "Empower"
+  && feature.properties.AOR !== "Blanche Hayden"
+  && feature.properties.AOR !== "Jose"
   && feature.properties.GEOID10 !== "79942"
   && feature.properties.GEOID10 !== "79839"
 };
