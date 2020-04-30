@@ -52,6 +52,9 @@
 
 <body>
 
+<!--///////////////// BUTTON & MAP CONTAINER FOR CSS ///////////////-->
+
+
 <!-- //////////////// BUTTON GROUP ///////////// -->  
 <div class="button-side">
 <div class="container-note">
@@ -72,9 +75,9 @@
 <button id="Brad-Surrett" >Brad Surrett</button>
 <button id="Brandon-Burum" >Brandon Burum</button>
 <button id="Brian-Anderson" >Brian Anderson</button>
-<button id="Britt-Brown">Britt Brown (TeamUp)</button>
+<!-- <button id="Britt-Brown">Britt Brown (TeamUp)</button> -->
 <button id="Chris-Pope" >Chris Pope</button>
-<button id="Clay-Parker">Clay Parker (TeamUp)</button>
+<!-- <button id="Clay-Parker">Clay Parker (TeamUp)</button> -->
 <!-- <button id="Coral-Harris">Coral Harris (TeamUp)</button> -->
 <button id="Craig-Lewis" >Craig Lewis</button>
 <!-- <button id="David-Newcomer">David Newcomer (TeamUp)</button> -->
@@ -126,17 +129,20 @@
 
 </div>
 </div>
-
+<div class="spacer"></div>
 <div class="CSR-note">
-<strong><font size = "5"><u><center>If no agent comes up:</strong></font></u><br><br></center>
+<strong><font size = "5"><u><center>Notes:</strong></font></u><br><br></center>
 
-<center><b>Empower</b> gets leads in TX, AR, TN, MS <br><br></center>
+<center>If no agent in TX, AR, TN, MS... leads to <b>Empower</b><br><br></center>
 
-<center>All other states go to <b>GoldenCare</b></center>
+<center>If no agent in any other state... leads to <b>GoldenCare</b></center>
+<br>
+<center>UT Health leads go to <b>Senior Choice Care</b></center>
 </div>
 
 </div>
 </div>
+
 
 <!-- /////////////////// END BUTTON GROUP /////////// -->
 
@@ -273,9 +279,11 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
               case "Patrick Hood": return {fillColor: "#EA7317", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
-              case "Britt Brown (TeamUp)": return {fillColor: "#B47553", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              // case "Britt Brown (TeamUp)": return {fillColor: "#B47553", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
-              case "Clay Parker (TeamUp)": return {fillColor: "#F4E8C8", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+              // case "Clay Parker (TeamUp)": return {fillColor: "#F4E8C8", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+
+              case "Senior Choice Plans": return {fillColor: "#938BA1", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};              
 
               case "Lynn (TeamUp)": return {fillColor: "#DB5461", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
@@ -330,7 +338,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
             case "Marilyn Marino": return {fillColor: "#918868", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
-            case "ALL LEADS TO TROUTS": return {fillColor: "#FF0000", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "ALL LEADS TO TROUTS": return {fillColor: "#1A86D0", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
             case "ALL LEADS TO GOLDENCARE": return {fillColor: "#DAA520", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
@@ -358,7 +366,8 @@ function allFilter(feature) {
   && feature.properties.AOR !== "Empower"
   && feature.properties.AOR !== "Blanche Hayden"
   && feature.properties.AOR !== "Jose"
-  && feature.properties.AOR != "Patrick Hood"
+  && feature.properties.AOR !== "Patrick Hood"
+  && feature.properties.AOR !== "Britt Brown (TeamUp)"
   && feature.properties.GEOID10 !== "79942"
   && feature.properties.GEOID10 !== "79839"
 };
@@ -409,9 +418,9 @@ $("#Chris-Pope").click(function() {
   // BOUNDS TEST
   map.flyToBounds([[27.5168358709191, -79.681155166],[26.4853628306723, -81.0695523837]])});
 
-$("#Britt-Brown").click(function() {
-  // BOUNDS TEST
-  map.flyToBounds([[35.87553388170378, -92.0654296875],[32.0358483074036, -99.4482421875]])});
+// $("#Britt-Brown").click(function() {
+//   // BOUNDS TEST
+//   map.flyToBounds([[35.87553388170378, -92.0654296875],[32.0358483074036, -99.4482421875]])});
 
 $("#Clay-Parker").click(function() {
   // BOUNDS TEST
