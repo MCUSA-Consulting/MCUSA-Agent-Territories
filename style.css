@@ -22,7 +22,6 @@ html, body {
   align-self: center;
 }
 
-
 .button-side {
 /*  display: block;*/
   display: flex;
@@ -145,7 +144,7 @@ html, body {
   cursor: pointer; 
   width: 60%; 
   display: block; /* Make the buttons appear below each other */
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 .button-container button:not(:last-child) {
