@@ -97,6 +97,7 @@
 <button id="Keith_Welch">Keith Welch</button>
 <button id="Kevin_Shay">Kevin Shay</button>
 <button id="Kyle_Akers">Kyle Akers</button>
+<button id="Leslie_Parker">Leslie Parker</button>
 <button id="Louise_Mickelson">Louise Mickelson</button>
 <button id="Mara_Davila_AND_Massiel_Lozano">Mara Davila & Massiel Lozano</button>
 <button id="Marco_Radwick">Marco Radwick</button>
@@ -304,6 +305,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
             case "Sherry Bowles (phone appt. anywhere)": return {fillColor: "#62C370", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "Deborah Wells (phone appt. in state)": return {fillColor: "#276FBF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "Mark Kuhne Hudson (can work all WI)": return {fillColor: "#B7245C", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "Leslie Parker": return {fillColor: "#3F8EFC", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             default: return {fillColor: "rgb(0,0,0,0.3)", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
           }
         },
@@ -391,6 +393,7 @@ $("#Kathleen_Allison").click(function() {map.flyToBounds([[49.14568736,-120.5255
 $("#Keith_Welch").click(function() {map.flyToBounds([[33.53251681,-83.27606091],[31.58116101,-86.1050404]])});
 $("#Kevin_Shay").click(function() {map.flyToBounds([[32.63107101,-94.87364017],[28.64819788,-100.5315991]])});
 $("#Kyle_Akers").click(function() {map.flyToBounds([[42.36658965,-87.86051909],[41.50541904,-89.27500884]])});
+$("#Leslie_Parker").click(function() {map.flyToBounds([[46.30303510924334,-120.42663574218751],[44.69962137126683,-124.11804199218751]])});
 $("#Louise_Mickelson").click(function() {map.flyToBounds([[48.25022687,-122.2244821],[47.47353364,-123.6389719]])});
 $("#Mara_Davila_AND_Massiel_Lozano").click(function() {map.flyToBounds([[34.62078811,-117.5691779],[33.66264991,-118.9836676]])});
 $("#Marco_Radwick").click(function() {map.flyToBounds([[47.95346247,-121.4750854],[47.17230001,-122.8895752]])});
