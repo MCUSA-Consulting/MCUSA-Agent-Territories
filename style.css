@@ -42,7 +42,7 @@ html, body {
 }
 
 .button-container {
-  height: calc(60vh - 10px);
+  height: calc(44.25vh - 10px);
   width: 20vw;
   align-self: center;
   background: #9F9DA0;
@@ -59,16 +59,19 @@ html, body {
 }
 
 .CSR-note {
-  height: 28.5vh;
+  height: calc(44.25vh - 10px);
   width: 20vw;
-/*  border: 5px solid #8B898D;*/
-  padding-left: 5px;
-/*  padding-top: 1.5vh;*/
-/*  border-radius: 20px;*/
+  border: 5px solid #8B898D;
+  /* padding: 5px; */
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   /* justify-content: center; */
+}
+
+.CSR-text {
+  padding: 10px 10px 10px 10px;
 }
 
 .CSR-note::-webkit-scrollbar-track
@@ -147,7 +150,7 @@ html, body {
   border-bottom: 1px solid #D1D1D1;
   border-left: 0px;
   border-right: 0px;
-
+  text-align: left;
   color: #1B1E1C;  /*White text */
   padding: 10px 24px; /* Some padding */
   cursor: pointer; 
