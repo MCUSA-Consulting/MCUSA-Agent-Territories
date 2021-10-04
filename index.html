@@ -109,7 +109,7 @@
 <button id="Robbie_Swensen">MP - Robbie Swensen</button>
 <button id="Robert_Norris">MP - Robert Norris</button>
 <button id="Sherry_Bowles">AA - Sherry Bowles</button>
-<button id="Steve_Waunch">MP - Steve Waunch</button>
+<!-- <button id="Steve_Waunch">MP - Steve Waunch</button> -->
 <button id="Tammra_Lawson">AA - Tammra Lawson</button>
 <button id="Ted_Marvin">AA - Ted Marvin</button>
 <button id="Teresa_Lim">MP - Teresa Lim</button>
@@ -123,13 +123,15 @@
 <div class="spacer"></div>
 <div class="CSR-note">
 <div class="CSR-text">
-<strong><font size = "5"><center>Notes - [09/30/2021]</strong></font><br><br></center>
+<strong><font size = "5"><center>Notes - [10/04/2021]</strong></font><br><br></center>
 
 <left>MP > Ambassador > GA > GoldenCare > Call Center</b><br><br></left>
 
 <left><u>AL</u> - If no agent, Sherry Bowles 1st then GoldenCare<br><br></left>
 <left><u>AR</u> - If no agent, leads to Brian Anderson. Jeff & Deb overflow<br><br></left>
+<left><u>IL</u> - Cindy S. back in IL<br><br></left>
 <left><u>NJ</u> - Hector Roberts available entire state<br><br></left>
+<left><u>NM</u> - Jesus Valvidia back in NM<br><br></left>
 <left><u>NORCAL</u> - If no agent, Mara & Massiel over phone<br><br></left>
 <left><u>OK</u> - Brian Anderson as backup<br><br></left>
 <left><u>OR</u> - If no agent, round robin between Melinda Thompson & Leslie Parker & Josh<br><br></left>
@@ -270,7 +272,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
             case "RA - Kevin Shay (T, Th)": return {fillColor: "#FF00AA", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "RA - Mike Fehrenbacher": return {fillColor: "#B9D7ED", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "RA - Steven Foster": return {fillColor: "#23628F", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
-            case "MP - Steve Waunch": return {fillColor: "#AA00FF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            // case "MP - Steve Waunch": return {fillColor: "#AA00FF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             // case "Rand Grey (TeamUp)": return {fillColor: "#ECA72C", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "GA - Brieanna & Zachary Akers": return {fillColor: "#44355B", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "MP - Jesus Valvidia": return {fillColor: "#BEEE62", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
@@ -292,7 +294,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
             case "MP - Louise Mickelson": return {fillColor: "#F2F4FF", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "GA - Kyle Akers": return {fillColor: "#820263", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             // case "Juliet Stephens": return {fillColor: "#A10702", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
-            // case "Randy Philip": return {fillColor: "#FFF3B0", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "Randy Philip": return {fillColor: "#FFF3B0", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             // case "Alisande Booker-Hall": return {fillColor: "#ECDCB0", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "AA - Tammra Lawson": return {fillColor: "#93ACB5", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             // case "Edward Allen": return {fillColor: "#21FA90", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
@@ -320,6 +322,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
             case "AA - Hector Roberts": return {fillColor: "#6B8F71", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "AA - Jamie Wheeler": return {fillColor: "#522B29", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "MP - Teresa Lim": return {fillColor: "#E9DF00", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "RR: AA - Carol Thomas & AA - Jamie Wheeler": return {fillColor: "#336699", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
 
             default: return {fillColor: "rgb(0,0,0,0.3)", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
           }
@@ -425,7 +428,7 @@ $("#Randy_Philip").click(function() {map.flyToBounds([[39.91379942,-76.58506017]
 $("#Robbie_Swensen").click(function() {map.flyToBounds([[49.01073015,-121.3114595],[47.46882372,-124.140439]])});
 $("#Robert_Norris").click(function() {map.flyToBounds([[37.19526816,-94.37530105],[35.32850716,-97.20428054]])});
 $("#Sherry_Bowles").click(function() {map.flyToBounds([[35.67967636,-86.34681144],[33.77693269,-89.17579094]])});
-$("#Steve_Waunch").click(function() {map.flyToBounds([[48.79941712,-114.95608],[45.65606484,-120.614039]])});
+// $("#Steve_Waunch").click(function() {map.flyToBounds([[48.79941712,-114.95608],[45.65606484,-120.614039]])});
 $("#Tammra_Lawson").click(function() {map.flyToBounds([[35.49876062,-82.59498617],[33.59181332,-85.42396566]])});
 $("#Ted_Marvin").click(function() {map.flyToBounds([[34.56095065,-82.40407436],[33.60213056,-83.81856411]])});
 $("#Teresa_Lim").click(function() {map.flyToBounds([[26.51389601,-79.57634928],[25.47334081,-80.99083903]])});
