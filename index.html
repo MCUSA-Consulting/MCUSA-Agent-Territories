@@ -323,6 +323,11 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
             case "AA - Jamie Wheeler": return {fillColor: "#522B29", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "MP - Teresa Lim": return {fillColor: "#E9DF00", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
             case "RR: AA - Carol Thomas & AA - Jamie Wheeler": return {fillColor: "#336699", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
+            case "Greater Sacramento / Northern State": return {fillColor: "#74AE6C", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
+            case "Bay Area": return {fillColor: "#ADD0E7", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
+            case "Central CA": return {fillColor: "#EF9F4F", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
+            case "Central Coast": return {fillColor: "#AB8B7A", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
+            case "Southern CA": return {fillColor: "#FAABA8", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
 
             default: return {fillColor: "rgb(0,0,0,0.3)", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
           }
@@ -345,6 +350,9 @@ function allFilter(feature) {
   && feature.properties.AOR !== "Senior Choice Plans"
   && feature.properties.GEOID10 !== "79942"
   && feature.properties.GEOID10 !== "79839"
+  && feature.properties.AOR !== "MP - Judy Dight"
+  && feature.properties.AOR !== "W2 - Mara Davila"
+  && feature.properties.AOR !== "MP - Massiel Lozano"
 };
 
 
@@ -360,8 +368,8 @@ info.onAdd = function (map) {
 // method that we will use to update the control based on feature properties passed
 info.update = function (props) {
     this._div.innerHTML = '<h4>Details</h4>' +  (props ?
-        '<b>' + 'ZIP: ' + '</b>' + props.ZCTA5CE10 + '<br/>' + '<b>AOR: </b>' + props.AOR 
-        : 'Hover over a zip');
+        '<b>' + 'Location: ' + '</b>' + props.ZCTA5CE10 + '<br/>' + '<b>AOR: </b>' + props.AOR 
+        : 'Hover over a location');
 };
 
 info.addTo(map);
