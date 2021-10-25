@@ -69,6 +69,7 @@
 <button id="Archie_Lovato">AA - Archie Lovato</button>
 <button id="Bill_Cole">MP - Bill Cole</button>
 <button id="Bob_Zelnick_AND_Sharon_Fletcher">MP - Bob Zelnick & Sharon Fletcher</button>
+<button id="Brad_Bradley">Brad Bradley</button>
 <button id="Brad_Rothermel">AA - Brad Rothermel</button>
 <button id="Brad_Surrett">GA - Brad Surrett</button>
 <button id="Bret_Stone">AA - Bret Stone</button>
@@ -349,6 +350,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
             case "Central CA": return {fillColor: "#EF9F4F", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
             case "Central Coast": return {fillColor: "#AB8B7A", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
             case "Southern CA": return {fillColor: "#FAABA8", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
+            case "Brad Bradley": return {fillColor: "#D72638", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
 
             default: return {fillColor: "rgb(0,0,0,0.3)", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
           }
@@ -371,9 +373,9 @@ function allFilter(feature) {
   && feature.properties.AOR !== "Senior Choice Plans"
   && feature.properties.GEOID10 !== "79942"
   && feature.properties.GEOID10 !== "79839"
-  && feature.properties.AOR !== "MP - Judy Dight"
-  && feature.properties.AOR !== "W2 - Mara Davila"
-  && feature.properties.AOR !== "MP - Massiel Lozano"
+  // && feature.properties.AOR !== "MP - Judy Dight"
+  // && feature.properties.AOR !== "W2 - Mara Davila"
+  // && feature.properties.AOR !== "MP - Massiel Lozano"
 };
 
 
@@ -412,6 +414,7 @@ $("#Anthony_Cordova").click(function() {map.flyToBounds([[32.12510326,-106.13749
 $("#Archie_Lovato").click(function() {map.flyToBounds([[35.20549257,-108.6930771],[31.33514201,-114.3510361]])});
 $("#Bill_Cole").click(function() {map.flyToBounds([[48.08862714,-121.9598039],[46.51871099,-124.7887834]])});
 $("#Bob_Zelnick_AND_Sharon_Fletcher").click(function() {map.flyToBounds([[39.121834,-74.38785316],[31.57886106,-85.70377113]])});
+$("#Brad_Bradley").click(function() {map.flyToBounds([[35.48097481570293,-91.13429602949779],[33.59649614754688,-93.64467200606028]])});
 $("#Brad_Rothermel").click(function() {map.flyToBounds([[39.02763644,-76.81085365],[38.12259019,-78.22534339]])});
 $("#Brad_Surrett").click(function() {map.flyToBounds([[33.92973579,-83.82095137],[33.44810626,-84.52819625]])});
 $("#Bret_Stone").click(function() {map.flyToBounds([[34.402375429773365,-82.89047241210939],[33.45321199380704,-84.73617553710938]])}); 
