@@ -80,6 +80,7 @@
 <button id="Chris_Pope">MP - Chris Pope</button>
 <button id="Cindy">GA - Cindy Schneiderman</button>
 <button id="Craig_Lewis">MP - Craig Lewis</button>
+<button id="David_Cranford">David Cranford</button>
 <button id="David_Stein">MP - David Stein</button>
 <button id="Debbie_Withrow">MP - Debbie Withrow</button>
 <button id="Deborah_Wells">AA - Deborah Wells</button>
@@ -124,12 +125,12 @@
 <div class="spacer"></div>
 <div class="CSR-note">
 <div class="CSR-text">
-<strong><font size = "5"><center>Notes - [10/22/2021]</strong></font><br><br></center>
+<strong><font size = "5"><center>Notes - [10/26/2021]</strong></font><br><br></center>
 
 <left>MP > Ambassador > GA > GoldenCare > Call Center</b><br><br></left>
 
 <left><u>AL</u> - If no agent, Sherry Bowles<br><br></left>
-<left><u>AR</u> - If no agent, leads to Brian Anderson. Jeff & Deb overflow<br><br></left>
+<left><u>AR</u> - If no agent, leads to Brad Bradley. Jeff & Deb overflow<br><br></left>
 <left><u>AZ</u> - Rotate between Chris Pope & Marcel
   <p style="margin: 0px; text-indent: 15px;"><b>OVERFLOW: </b>Akers</p><br>
 </left>
@@ -146,6 +147,7 @@
 <left><u>IL</u> - Kyle Akers, Chris Pope
   <p style="margin: 0px; text-indent: 15px;"><b>OVERFLOW: </b>Cindy Schneiderman</p><br>
 </left>
+<left><u>MS</u> - Leads to Sherry Bowles<br><br></left>
 <left><u>NC</u> - Bret Stone available entire state<br><br></left>
 <left><u>NJ</u> - Hector Roberts available entire state<br><br></left>
 <left><u>NM</u> - Jesus Valvidia back in NM<br><br></left>
@@ -158,7 +160,7 @@
 <left><u>OK</u> - Brian Anderson as backup<br><br></left>
 <left><u>OR</u> - If no agent, round robin between Melinda Thompson & Leslie Parker & Josh<br><br></left>
 <left><u>SC</u> - Round Robin between AA - Carol Thomas, AA - Jamie Wheeler, AA - Tom Boyd, Bret Stone<br><br></left>
-<!-- <left><u>TX</u> - If no agent, leads to Empower<br><br></left> -->
+<left><u>TN</u> - Brad Bradley & Sherry Bowles as backup<br><br></left>
 <left><u>VA</u> - If no agent, round robin between Deborah Wells, Brad Rothermel, and Randy Philip</left>
 
 
@@ -352,6 +354,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
             case "Central Coast": return {fillColor: "#AB8B7A", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
             case "Southern CA": return {fillColor: "#FAABA8", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
             case "Brad Bradley": return {fillColor: "#D72638", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
+            case "David Cranford": return {fillColor: "#214E34", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
 
             default: return {fillColor: "rgb(0,0,0,0.3)", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
           }
@@ -426,6 +429,7 @@ $("#Carol_Thomas").click(function() {map.flyToBounds([[34.23578833,-84.00143966]
 $("#Chris_Pope").click(function() {map.flyToBounds([[27.49615017,-79.58075521],[26.46448657,-80.99524495]])});
 $("#Cindy").click(function() {map.flyToBounds([[42.49814972,-86.52030511],[40.76777584,-89.34928461]])});
 $("#Craig_Lewis").click(function() {map.flyToBounds([[34.22769027,-83.43085273],[33.74774166,-84.1380976]])});
+$("#David_Cranford").click(function() {map.flyToBounds([[36.3882577298753,-95.61676025390626],[34.52479849020022,-99.30816650390626]])});
 $("#David_Stein").click(function() {map.flyToBounds([[26.66220093,-79.8088503],[26.14374119,-80.51609517]])});
 $("#David_Williamson").click(function() {map.flyToBounds([[34.79329651,-82.82027689],[33.83713015,-84.23476664]])});
 $("#Debbie_Withrow").click(function() {map.flyToBounds([[40.51775582,-92.32895792],[36.90574913,-97.9869169]])});
