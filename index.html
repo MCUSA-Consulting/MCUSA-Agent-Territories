@@ -86,6 +86,7 @@
 <button id="Deborah_Wells">AA - Deborah Wells</button>
 <button id="Debra_Dryden">MP - Debra Dryden</button>
 <button id="Derek_Baltimore">MP - Derek Baltimore</button>
+<button id="Diana_Edwards">AA - Diana Edwards</button>
 <!-- <button id="Dwain_Thompson">MP - Dwain Thompson</button> -->
 <button id="Ed_Ward">MP - Ed Ward</button>
 <button id="Greg_Nicholaides">AA - Greg Nicholaides</button>
@@ -94,6 +95,7 @@
 <button id="Jay_Werner">AA - Jay Werner</button>
 <button id="Jeff_Slibowski">MP - Jeff Slibowski</button>
 <button id="Jesus_Valvidia">MP - Jesus Valvidia</button>
+<button id="Joe_Washko">Joe Washko</button>
 <button id="Judy_Dight">MP - Judy Dight</button>
 <button id="Julie_Hardie">MP - Julie Hardie</button>
 <button id="Kathleen_Allison">AA - Kathleen Allison</button>
@@ -355,6 +357,8 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
             case "Southern CA": return {fillColor: "#FAABA8", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
             case "Brad Bradley": return {fillColor: "#D72638", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
             case "David Cranford": return {fillColor: "#214E34", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
+            case "AA - Diana Edwards": return {fillColor: "#399E5A", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
+            case "Joe Washko": return {fillColor: "#F4F1BB", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
 
             default: return {fillColor: "rgb(0,0,0,0.3)", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
           }
@@ -436,6 +440,7 @@ $("#Debbie_Withrow").click(function() {map.flyToBounds([[40.51775582,-92.3289579
 $("#Deborah_Wells").click(function() {map.flyToBounds([[38.67049755,-76.12153833],[36.84006156,-78.95051782]])});
 $("#Debra_Dryden").click(function() {map.flyToBounds([[47.35881313,-122.1467822],[46.96524505,-122.8540271]])});
 $("#Derek_Baltimore").click(function() {map.flyToBounds([[36.20230627,-88.66508518],[34.31181621,-91.49406468]])});
+$("#Diana_Edwards").click(function() {map.flyToBounds([[31.499458475095476,-95.00976562500001],[27.51854861720857,-102.39257812500001]])});
 $("#Dwain_Thompson").click(function() {map.flyToBounds([[35.40714396,-83.67959383],[33.49807543,-86.50857332]])});
 $("#Ed_Ward").click(function() {map.flyToBounds([[39.12357262,-89.49443903],[37.30454675,-92.32341852]])});
 $("#Edward_Allen").click(function() {map.flyToBounds([[34.32985042,-117.6114862],[33.36840672,-119.0259759]])});
@@ -446,6 +451,7 @@ $("#Jay_Werner").click(function() {map.flyToBounds([[33.13881224,-92.71916739],[
 $("#Jean_Christophe_Tran").click(function() {map.flyToBounds([[33.93715102,-117.4863316],[33.45556315,-118.1935764]])});
 $("#Jeff_Slibowski").click(function() {map.flyToBounds([[41.05849716,-91.44952002],[37.47470338,-97.107479]])});
 $("#Jesus_Valvidia").click(function() {map.flyToBounds([[32.18144159,-105.4027086],[31.19637453,-106.8171984]])});
+$("#Joe_Washko").click(function() {map.flyToBounds([[33.92540088040029,-95.0042724609375],[32.006024038535976,-98.6956787109375]])});
 $("#Judy_Dight").click(function() {map.flyToBounds([[35.72419745,-113.280092],[31.87753655,-118.938051]])});
 $("#Julie_Hardie").click(function() {map.flyToBounds([[48.08516324,-121.0516185],[47.30598154,-122.4661083]])});
 $("#Kathleen_Allison").click(function() {map.flyToBounds([[49.14568736,-120.525516],[47.60791561,-123.3544955]])});
