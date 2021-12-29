@@ -117,6 +117,7 @@
 <button id="Robbie_Swensen">MP - Robbie Swensen</button>
 <button id="Robert_Norris">MP - Robert Norris</button>
 <button id="Sherry_Bowles">AA - Sherry Bowles</button>
+<button id="Stephen_Gallagher">GA - Stephen Gallagher</button>
 <!-- <button id="Steve_Waunch">MP - Steve Waunch</button> -->
 <button id="Tammra_Lawson">AA - Tammra Lawson</button>
 <!-- <button id="Ted_Marvin">AA - Ted Marvin</button> -->
@@ -366,6 +367,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
             case "Joe Washko": return {fillColor: "#F4F1BB", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
             case "MP - Charlotte Collins-Young": return {fillColor: "#657ED4", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
             case "MP - Grace Morency": return {fillColor: "#3D3B8E", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
+            case "GA - Stephen Gallagher": return {fillColor: "#ABC2ED", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: 0.7};
 
 
             default: return {fillColor: "rgb(0,0,0,0.3)", stroke: styleStroke, color: styleColor, weight: styleWeight, opacity: styleOpacity, fillOpacity: stylefillOpacity};
@@ -481,6 +483,7 @@ $("#Randy_Philip").click(function() {map.flyToBounds([[39.91379942,-76.58506017]
 $("#Robbie_Swensen").click(function() {map.flyToBounds([[49.01073015,-121.3114595],[47.46882372,-124.140439]])});
 $("#Robert_Norris").click(function() {map.flyToBounds([[37.19526816,-94.37530105],[35.32850716,-97.20428054]])});
 $("#Sherry_Bowles").click(function() {map.flyToBounds([[35.67967636,-86.34681144],[33.77693269,-89.17579094]])});
+$("#Stephen_Gallagher").click(function() {map.flyToBounds([[36.326270971911676,-84.35302734375001],[34.46136019981431,-88.04443359375001]])});
 // $("#Steve_Waunch").click(function() {map.flyToBounds([[48.79941712,-114.95608],[45.65606484,-120.614039]])});
 $("#Tammra_Lawson").click(function() {map.flyToBounds([[35.49876062,-82.59498617],[33.59181332,-85.42396566]])});
 // $("#Ted_Marvin").click(function() {map.flyToBounds([[34.56095065,-82.40407436],[33.60213056,-83.81856411]])});
